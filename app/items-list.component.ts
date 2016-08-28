@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { ItemsService } from './items.service';
 import { Item } from './item.model';
-import {PaginatePipe, PaginationControlsCmp, PaginationService} from 'ng2-pagination';
+import { PaginatePipe, PaginationControlsCmp, PaginationService } from 'ng2-pagination';
 
 @Component({
   selector: 'items-list',
