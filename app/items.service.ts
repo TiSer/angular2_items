@@ -1,9 +1,11 @@
 export class ItemsService {
 
   items = [
-    { name: 'Apple', id: 1 },
-    { name: 'Two', id: 2 },
-    { name: 'Three', id: 3 }
+    { id: 1, name: 'Car', price: 999999, description: 'fast' },
+    { id: 2, name: 'MP3-Player', price: 100, description: 'funny' },
+    { id: 3, name: 'Laptop', price: 1000, description: 'useful' },
+    { id: 4, name: 'Core', price: 1, description: 'priceless' },
+    { id: 5, name: 'Tent', price: 10, description: 'cozy' }
   ];
 
   getItems() {

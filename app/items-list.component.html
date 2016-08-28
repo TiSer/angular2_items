@@ -1,7 +1,11 @@
  <h2>Items</h2>
 
  <ul>
-   <li *ngFor="let item of items">
+   <li *ngFor="let item of items | paginate: { itemsPerPage: 3, currentPage: page }">
      <a [routerLink]="['/item',  item.id ]">{{item.name}}</a>
    </li>
  </ul>
+
+ <div class="is-text-centered">
+     <pagination-controls (pageChange)="page = $event"></pagination-controls>
+ </div>

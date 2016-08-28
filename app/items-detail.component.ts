@@ -7,6 +7,10 @@ import { Item } from './item.model';
   selector: 'items-detail',
   template: `
     <h2>{{item.name}}</h2>
+    <div>
+      <p>Price: {{item.price}}</p>
+      <p>Description: {{item.description}}</p>
+    </div>
   `
 })
 export class ItemsDetailComponent implements OnInit {
@@ -18,6 +22,6 @@ export class ItemsDetailComponent implements OnInit {
               private route: ActivatedRoute){}
 
   ngOnInit() {
-    this.item = this.itemsService.getItem(this.route.snapshot.params.id);
+    this.item = this.item = this.itemsService.getItem(this.route.snapshot.params['id']);
   }
 }
