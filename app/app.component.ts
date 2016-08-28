@@ -11,17 +11,18 @@ import { Category } from './category.model';
   selector: 'my-app',
   template: `
     <h1>Items App</h1>
+    <a [routerLink]="['/']">Items List</a>
     <h4>Categories</h4>
-    <ul>
+    <ul class="list-inline">
       <li *ngFor="let category of categories">
         <a [routerLink]="['/category', category.id ]">{{category.name}}</a>
       </li>
     </ul>
-    <a [routerLink]="['/']">Items List</a>
     <router-outlet></router-outlet>
   `,
   directives: [ROUTER_DIRECTIVES],
-  providers: [ItemsService, CategoriesService]
+  providers: [ItemsService, CategoriesService],
+  styleUrls: ["./app/app.component.css"]
 })
 
 export class AppComponent implements OnInit {
