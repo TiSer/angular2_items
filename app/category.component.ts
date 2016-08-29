@@ -11,7 +11,7 @@ import { Item } from './item.model';
   template: `
      <h4>Items</h4>
      <li *ngFor="let item of items">
-       <a [routerLink]="['/item',  item.id ]">{{item.name}}</a>
+       <a [routerLink]="['/item', item.id ]">{{item.name}}</a>
      </li>
      <router-outlet></router-outlet>
   `,

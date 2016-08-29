@@ -17,7 +17,6 @@ export class ItemsService {
   }
 
   getItem(id: any) {
-    //this.items[0]
      return this.items.find(item => item.id == id);
   }
 }
